@@ -229,7 +229,7 @@ void ASimModeBase::initializeTimeOfDay()
 #if ENGINE_MINOR_VERSION > 24
         FObjectProperty* sun_prop = CastFieldChecked<FObjectProperty>(p);
 #else
-        FObjectProperty* sun_prop = Cast<FObjectProperty>(p);
+        FObjectProperty* sun_prop = static_cast<FObjectProperty*>(p);
 #endif
 
         UObject* sun_obj = sun_prop->GetObjectPropertyValue_InContainer(sky_sphere_);
