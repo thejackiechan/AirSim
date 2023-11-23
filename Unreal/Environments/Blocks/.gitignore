@@ -4,7 +4,6 @@ Plugins/
 Packaged/
 
 # don't check-in generated files
-*.ini
 *.sln
 *_BuiltData.uasset
 /.kdev/
@@ -17,6 +16,7 @@ Packaged/
 /CMakeLists.txt
 /Makefile
 /.vs/
+/.config/
 
 # avoid checking uproject because this is usually just version change
 *.uproject
