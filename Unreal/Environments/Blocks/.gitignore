@@ -4,6 +4,7 @@ Plugins/
 Packaged/
 
 # don't check-in generated files
+*.ini
 *.sln
 *_BuiltData.uasset
 /.kdev/
@@ -22,6 +23,3 @@ Packaged/
 
 # avoid checking in MacOS XCode assets
 *.xcworkspace
-
-# avoid checking in .vs settings
-.vs/
