@@ -834,7 +834,7 @@ namespace airlib
                                                                       vehicle_setting->allow_api_always);
             vehicle_setting->auto_create = settings_json.getBool("AutoCreate",
                                                                  vehicle_setting->auto_create);
-            vehicle_setting->enable_collision_passthrough = settings_json.getBool("EnableCollisionPassthrogh",
+            vehicle_setting->enable_collision_passthrough = settings_json.getBool("EnableCollisionPassthrough",
                                                                                   vehicle_setting->enable_collision_passthrough);
             vehicle_setting->enable_trace = settings_json.getBool("EnableTrace",
                                                                   vehicle_setting->enable_trace);
