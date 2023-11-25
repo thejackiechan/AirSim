@@ -231,7 +231,7 @@ void ASimModeBase::initializeTimeOfDay()
 #else
         FObjectProperty* sun_prop = static_cast<FObjectProperty*>(p);
 #endif
-
+        assert(sun_prop); // ensure sun_prop is not NULL
         UObject* sun_obj = sun_prop->GetObjectPropertyValue_InContainer(sky_sphere_);
         sun_ = Cast<ADirectionalLight>(sun_obj);
         if (sun_)
