@@ -7,6 +7,7 @@ import inspect
 import types
 import re
 import logging
+import cv2
 
 from .types import *
 
@@ -47,7 +48,8 @@ def write_file(filename, bstr):
     Used for writing compressed PNG images
     """
     with open(filename, 'wb') as afile:
-        afile.write(bstr)
+        img = cv2.imdecode(np.frombuffer(bstr, dtype=np.uint8), cv2.IMREAD_COLOR)
+        cv2.imwrite(filename, img)
 
 # helper method for converting getOrientation to roll/pitch/yaw
 # https:#en.wikipedia.org/wiki/Conversion_between_quaternions_and_Euler_angles
