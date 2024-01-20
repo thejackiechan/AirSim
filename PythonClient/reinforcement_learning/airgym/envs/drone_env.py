@@ -43,7 +43,7 @@ class AirSimDroneEnv(AirSimEnv):
         self.drone.moveByVelocityAsync(1, -0.67, -0.8, 5).join()
 
     def transform_obs(self, responses):
-        img1d = np.array(responses[0].image_data_float, dtype=np.float)
+        img1d = np.array(responses[0].image_data_float, dtype=float)
         img1d = 255 / np.maximum(np.ones(img1d.size), img1d)
         img2d = np.reshape(img1d, (responses[0].height, responses[0].width))
 
